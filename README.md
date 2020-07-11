@@ -5,4 +5,4 @@ Pretty useful until PyTorch adds official functions to its code base.
 
 ## Currently Implemented:
 
-1. Patch Extraction from n-D tensors. `utils.transforms.extract_patches` can extract patches from arbitrary n-D tensors by specifying a filter shape and step.
+1. Patch Extraction from n-D tensors. `utils.transforms.extract_patches` can extract patches from arbitrary n-D tensors (without breaking autograd) by specifying a filter shape and step.
