@@ -7,6 +7,7 @@ def _patch_nd(volume, p_len, p_step):
     b, c = volume.shape[0], volume.shape[1]
     if isinstance(p_len, int):
         p_len = [p_len for _ in range(d)]
+    if isinstance(p_step, int):
         p_step = [p_step for _ in range(d)]
 
     reshaped = [int((volume.shape[idx+2]-(p_len[idx]-p_step[idx]))
@@ -43,5 +44,5 @@ def extract_patches(volume, p_len, p_step):
 # if __name__ == "__main__":
 #
 #     vol = torch.rand((1,4,64,64,64))
-#     p = extract_patches(vol, 4, 2)
+#     p = extract_patches(vol, [4,4,4], 2)
 #     print(p.shape)
